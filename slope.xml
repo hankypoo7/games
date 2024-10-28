@@ -1,46 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document lang="en-us">
-    <head>
+<Module>
+    <ModulePrefs>
         <title>Slope Game | Bigfoot's Game Shack</title>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/scheng123321/tmm-html5-cdn1@51a72f0faa2d9cd524a0c11b4ca368350f988458/slope/TemplateData/style.css"/>
-        
-        <script>
+        <description>Get ready to level up your gaming experience with Bigfoot's Game Shack.</description>
+        <author>Bigfoot9999</author>
+        <icon>
+            <url>https://ssl.gstatic.com/classroom/favicon.png</url>
+        </icon>
+        <content type="html">
             <![CDATA[
-                var gameInstance;
-                window.onload = function () {
-                    gameInstance = UnityLoader.instantiate(
-                        "gameContainer",
-                        "https://cdn.jsdelivr.net/gh/scheng123321/tmm-html5-cdn1@51a72f0faa2d9cd524a0c11b4ca368350f988458/slope/Build/slope.json",
-                        {
-                            onProgress: UnityProgress,
-                            Module: {
-                                onRuntimeInitialized: function () {
-                                    UnityProgress(gameInstance, "complete");
-                                }
+                <html lang="en-us">
+                    <head>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/scheng123321/tmm-html5-cdn1@51a72f0faa2d9cd524a0c11b4ca368350f988458/slope/TemplateData/style.css"/>
+                        <script src="https://cdn.jsdelivr.net/gh/scheng123321/tmm-html5-cdn1@51a72f0faa2d9cd524a0c11b4ca368350f988458/slope/TemplateData/UnityProgress.js"></script>
+                        <script src="https://cdn.jsdelivr.net/gh/scheng123321/tmm-html5-cdn1@51a72f0faa2d9cd524a0c11b4ca368350f988458/slope/TemplateData/unityloader41.js"></script>
+                        <style>
+                            body {
+                                margin: 0;
+                                overflow: hidden;
+                                background: rgb(35, 31, 32);
                             }
-                        }
-                    );
-                };
+                            #gameContainer {
+                                width: 100%;
+                                height: 100vh;
+                                position: relative;
+                            }
+                        </style>
+                        <script>
+                            var gameInstance;
+                            window.onload = function () {
+                                gameInstance = UnityLoader.instantiate(
+                                    "gameContainer",
+                                    "https://cdn.jsdelivr.net/gh/scheng123321/tmm-html5-cdn1@51a72f0faa2d9cd524a0c11b4ca368350f988458/slope/Build/slope.json",
+                                    {
+                                        onProgress: UnityProgress,
+                                        Module: {
+                                            onRuntimeInitialized: function () {
+                                                UnityProgress(gameInstance, "complete");
+                                            }
+                                        }
+                                    }
+                                );
+                            };
+                        </script>
+                    </head>
+                    <body>
+                        <div id="gameContainer"></div>
+                    </body>
+                </html>
             ]]>
-        </script>
-        
-        <script src="https://cdn.jsdelivr.net/gh/scheng123321/tmm-html5-cdn1@51a72f0faa2d9cd524a0c11b4ca368350f988458/slope/TemplateData/UnityProgress.js"/>
-        <script src="https://cdn.jsdelivr.net/gh/scheng123321/tmm-html5-cdn1@51a72f0faa2d9cd524a0c11b4ca368350f988458/slope/TemplateData/unityloader41.js"/>
-        
-        <style>
-            <![CDATA[
-                body {
-                    margin: 0;
-                    overflow: hidden;
-                    background: rgb(35, 31, 32);
-                }
-                #gameContainer {
-                    width: 100%;
-                    height: 100vh;
-                    position: relative;
-                }
-            ]]>
-        </style>
+        </content>
+    </ModulePrefs>
+</Module>
+
     </head>
     <body>
         <div id="gameContainer"></div>
