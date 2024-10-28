@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Bigfoot9999 says hello -->
+<script>
+    if (window.parent !== window.self) window.parent.postMessage("bonk", "*");
+    window.addEventListener("DOMContentLoaded", function () {
+        document.body.style.margin = "0";
+        document.body.style.height = "100vh";
+        document.body.style.overflow = "hidden";
+    });
+</script>
+<html lang="en-us">
+<head>
+    <!-- HTML Meta Tags -->
+    <title>Slope Game | Bigfoot's Game Shack</title>
+    <meta name="description" content="Get ready to level up your gaming experience with Bigfoot's Game Shack, offering a massive selection of over 500+ games built for Chromebook gaming. ">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:url" content="https://bigfootshack.net">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Slope Game | Bigfoot's Game Shack">
+    <meta property="og:description" content="Get ready to level up your gaming experience with Bigfoot's Game Shack, offering a massive selection of over 500+ games built for Chromebook gaming. ">
+    <meta property="og:image" content="https://i.ytimg.com/vi/IeZjZe8TeV4/maxresdefault.jpg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="v4.bigfeet.app">
+    <meta property="twitter:url" content="https://v4.bigfeet.app">
+    <meta name="twitter:title" content="Slope Game | Bigfoot's Game Shack">
+    <meta name="twitter:description" content="Get ready to level up your gaming experience with Bigfoot's Game Shack, offering a massive selection of over 500+ games built for Chromebook gaming. ">
+    <meta name="twitter:image" content="https://i.ytimg.com/vi/IeZjZe8TeV4/maxresdefault.jpg">
+
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="TemplateData56/style.css" />
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <script src="TemplateData56/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+
+    <script>
+        var gameInstance = UnityLoader.instantiate("gameContainer", "Build/slope_27Sept.json", {
+            onProgress: UnityProgress,
+            Module: {
+                onRuntimeInitialized: function () {
+                    UnityProgress(gameInstance, "complete");
+                },
+            },
+        });
+    </script>
+</head>
+<body>
+    <div id="gameContainer" style="width: 100%; height: 100%;"></div>
+</body>
+</html>
